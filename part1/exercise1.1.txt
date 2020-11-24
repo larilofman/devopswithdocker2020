@@ -1,0 +1,10 @@
+Script started on 2020-11-24 14:10:32+02:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+]0;coco@coco-VirtualBox: ~[01;32mcoco@coco-VirtualBox[00m:[01;34m~[00m$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                     PORTS               NAMES
+14be662d056f        nginx               "/docker-entrypoint.…"   8 minutes ago       Exited (0) 7 minutes ago                       great_hermann
+ac1d75829602        nginx               "/docker-entrypoint.…"   8 minutes ago       Exited (0) 7 minutes ago                       youthful_carson
+66a571e7e89a        nginx               "/docker-entrypoint.…"   8 minutes ago       Up 8 minutes               80/tcp              wonderful_kalam
+]0;coco@coco-VirtualBox: ~[01;32mcoco@coco-VirtualBox[00m:[01;34m~[00m$ exit
+exit
+
+Script done on 2020-11-24 14:10:43+02:00 [COMMAND_EXIT_CODE="0"]

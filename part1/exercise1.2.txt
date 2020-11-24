@@ -1,0 +1,8 @@
+Script started on 2020-11-24 14:23:41+02:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="129" LINES="30"]
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+Script done on 2020-11-24 14:23:41+02:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2020-11-24 14:23:41+02:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="129" LINES="30"]
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+
+Script done on 2020-11-24 14:23:42+02:00 [COMMAND_EXIT_CODE="0"]
