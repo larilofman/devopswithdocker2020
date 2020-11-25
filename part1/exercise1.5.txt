@@ -1,0 +1,6 @@
+docker run -it -d --name ubuntu_cont ubuntu:16.04 sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
+docker exec ubuntu_cont apt-get update
+docker exec ubuntu_cont apt-get install -y curl
+docker stop ubuntu_cont
+docker start ubuntu_cont -i
+helsinki.fi
