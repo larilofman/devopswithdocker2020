@@ -1,0 +1,2 @@
+docker build -t backi .
+docker run -p 8000:8000 -v $(pwd)/logs.txt:/usr/src/app/logs.txt backi
