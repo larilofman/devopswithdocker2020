@@ -1,1 +1,1 @@
-https://hub.docker.com/repository/docker/larwazor/express_app
+https://hub.docker.com/r/larwazor/express_app
