@@ -1,0 +1,14 @@
+version: '3.5'  
+
+services: 
+    frontend: 
+      build: ./frontend
+      container_name: compose_frontend
+      ports:
+        - 5000:5000
+    backend: 
+      build: ./backend
+      container_name: compose_backend
+      ports:
+        - 8000:8000
+      
