@@ -1,0 +1,20 @@
+version: '3.5'  
+
+services:
+    redis:
+      image: redis
+      container_name: compose_redis
+      ports:
+        - 6379:6379
+    frontend: 
+      build: ./frontend
+      container_name: compose_frontend
+      ports:
+        - 5000:5000
+    backend: 
+      build: ./backend
+      container_name: compose_backend
+      environment:
+        - REDIS=redis
+      ports:
+        - 8000:8000    
