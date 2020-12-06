@@ -1,0 +1,36 @@
+version: '3.5'  
+
+services:
+    redis:
+      image: redis
+      container_name: compose_redis
+      ports:
+        - 6379:6379
+      volumes:
+        - ./redis_data:/data
+    frontend: 
+      build: ./frontend
+      container_name: compose_frontend
+      ports:
+        - 5000:5000
+    backend: 
+      build: ./backend
+      container_name: compose_backend
+      environment:
+        - REDIS=redis  
+        - DB_USERNAME=coco
+        - DB_PASSWORD=passu
+        - DB_NAME=db
+        - DB_HOST=db
+      ports:
+        - 8000:8000
+    db:
+      image: postgres
+      restart: unless-stopped
+      environment:
+        - POSTGRES_USER=coco
+        - POSTGRES_PASSWORD=passu
+        - POSTGRES_DB=db
+      container_name: compose_db
+      volumes:
+        - ./database:/var/lib/postgresql/data 
