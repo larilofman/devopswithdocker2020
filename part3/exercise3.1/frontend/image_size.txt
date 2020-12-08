@@ -1,0 +1,41 @@
+Before:
+
+compose_project_frontend                 latest              37bb4272e119        2 days ago          1.12GB
+
+IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
+37bb4272e119        2 days ago          /bin/sh -c #(nop)  CMD ["npm" "start"]          0B                  
+2238917aefee        2 days ago          /bin/sh -c #(nop)  ENV API_URL=http://localh…   0B                  
+79ae9a0d60a9        2 days ago          /bin/sh -c #(nop) COPY dir:38854954f27fd3c87…   558kB               
+8fd354f676f8        2 days ago          /bin/sh -c npm install                          212MB               
+7b225a568aab        2 days ago          /bin/sh -c #(nop) COPY multi:7b36863e992ea11…   528kB               
+2d394bd480b3        10 days ago         /bin/sh -c #(nop) WORKDIR /usr/src/app          0B                  
+2db91b8e7c1b        2 weeks ago         /bin/sh -c #(nop)  CMD ["node"]                 0B                  
+<missing>           2 weeks ago         /bin/sh -c #(nop)  ENTRYPOINT ["docker-entry…   0B                  
+<missing>           2 weeks ago         /bin/sh -c #(nop) COPY file:238737301d473041…   116B                
+<missing>           2 weeks ago         /bin/sh -c set -ex   && for key in     6A010…   8.46MB              
+<missing>           2 weeks ago         /bin/sh -c #(nop)  ENV YARN_VERSION=1.22.5      0B                  
+<missing>           2 weeks ago         /bin/sh -c ARCH= && dpkgArch="$(dpkg --print…   67.3MB              
+<missing>           2 weeks ago         /bin/sh -c #(nop)  ENV NODE_VERSION=10.23.0     0B                  
+<missing>           2 weeks ago         /bin/sh -c groupadd --gid 1000 node   && use…   333kB               
+<missing>           2 weeks ago         /bin/sh -c set -ex;  apt-get update;  apt-ge…   561MB               
+<missing>           2 weeks ago         /bin/sh -c apt-get update && apt-get install…   142MB               
+<missing>           2 weeks ago         /bin/sh -c set -ex;  if ! command -v gpg > /…   7.81MB              
+<missing>           2 weeks ago         /bin/sh -c apt-get update && apt-get install…   23.2MB              
+<missing>           2 weeks ago         /bin/sh -c #(nop)  CMD ["bash"]                 0B                  
+<missing>           2 weeks ago         /bin/sh -c #(nop) ADD file:373a8875589f170b5…   101MB
+
+After:
+
+compose_project_frontend                 latest              baf080711bb2        8 minutes ago       493MB
+
+IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
+baf080711bb2        10 minutes ago      /bin/sh -c #(nop)  CMD ["npm" "start"]          0B                  
+18cb9848eaf2        10 minutes ago      /bin/sh -c apt-get update && apt-get install…   362MB               
+11cb56538c39        12 minutes ago      /bin/sh -c #(nop) COPY dir:7afa4e15994b4d656…   558kB               
+257388c3289e        20 minutes ago      /bin/sh -c #(nop) WORKDIR /usr/src/app          0B                  
+1d73043e646a        2 hours ago         /bin/sh -c #(nop)  ENV API_URL=http://localh…   0B                  
+dfeff22e96ae        6 weeks ago         /bin/sh -c #(nop)  CMD ["/bin/bash"]            0B                  
+<missing>           6 weeks ago         /bin/sh -c mkdir -p /run/systemd && echo 'do…   7B                  
+<missing>           6 weeks ago         /bin/sh -c rm -rf /var/lib/apt/lists/*          0B                  
+<missing>           6 weeks ago         /bin/sh -c set -xe   && echo '#!/bin/sh' > /…   745B                
+<missing>           6 weeks ago         /bin/sh -c #(nop) ADD file:c1f3147c7b6710af5…   131MB   
