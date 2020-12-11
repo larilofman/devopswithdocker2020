@@ -1,0 +1,37 @@
+Before
+
+REPOSITORY                               TAG                 IMAGE ID            CREATED             SIZE
+compose_project_frontend                 latest              69652abf540c        21 hours ago        494MB
+
+IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
+69652abf540c        21 hours ago        /bin/sh -c #(nop)  CMD ["npm" "start"]          0B                  
+5e9288af1349        21 hours ago        /bin/sh -c #(nop)  USER user1                   0B                  
+21ee4e239ab6        21 hours ago        /bin/sh -c apt-get update &&     apt-get ins…   363MB               
+68b555892f9a        21 hours ago        /bin/sh -c #(nop) COPY dir:a86f5d407bd4431e6…   558kB               
+321e8f0cc1f0        21 hours ago        /bin/sh -c #(nop) WORKDIR /usr/src/app          0B                  
+dfeff22e96ae        6 weeks ago         /bin/sh -c #(nop)  CMD ["/bin/bash"]            0B                  
+<missing>           6 weeks ago         /bin/sh -c mkdir -p /run/systemd && echo 'do…   7B                  
+<missing>           6 weeks ago         /bin/sh -c rm -rf /var/lib/apt/lists/*          0B                  
+<missing>           6 weeks ago         /bin/sh -c set -xe   && echo '#!/bin/sh' > /…   745B                
+<missing>           6 weeks ago         /bin/sh -c #(nop) ADD file:c1f3147c7b6710af5…   131MB  
+
+After
+
+EPOSITORY                               TAG                 IMAGE ID            CREATED              SIZE
+compose_project_frontend                 latest              9f001158215a        About a minute ago   328MB
+
+IMAGE               CREATED              CREATED BY                                      SIZE                COMMENT
+9f001158215a        About a minute ago   /bin/sh -c #(nop)  CMD ["npm" "start"]          0B                  
+110c3767ab34        About a minute ago   /bin/sh -c #(nop)  USER user1                   0B                  
+f0eb99fa56ee        About a minute ago   /bin/sh -c npm install &&     adduser -D use…   218MB               
+f69c84b51639        3 minutes ago        /bin/sh -c #(nop) COPY dir:7075a7560fb4a3498…   558kB               
+3add01f3d456        23 minutes ago       /bin/sh -c #(nop) WORKDIR /usr/src/app          0B                  
+f4268de957a6        21 hours ago         /bin/sh -c #(nop)  CMD ["node"]                 0B                  
+<missing>           21 hours ago         /bin/sh -c #(nop)  ENTRYPOINT ["docker-entry…   0B                  
+<missing>           21 hours ago         /bin/sh -c #(nop) COPY file:238737301d473041…   116B                
+<missing>           21 hours ago         /bin/sh -c apk add --no-cache --virtual .bui…   7.62MB              
+<missing>           21 hours ago         /bin/sh -c #(nop)  ENV YARN_VERSION=1.22.5      0B                  
+<missing>           21 hours ago         /bin/sh -c addgroup -g 1000 node     && addu…   96.1MB              
+<missing>           21 hours ago         /bin/sh -c #(nop)  ENV NODE_VERSION=15.4.0      0B                  
+<missing>           7 months ago         /bin/sh -c #(nop)  CMD ["/bin/sh"]              0B                  
+<missing>           7 months ago         /bin/sh -c #(nop) ADD file:b91adb67b670d3a6f…   5.61MB 
