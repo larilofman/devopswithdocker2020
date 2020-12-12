@@ -1,0 +1,9 @@
+FROM openjdk:8-alpine
+COPY . .
+RUN adduser -D user1 && \
+    ./mvnw package
+    
+USER user1
+
+EXPOSE 8080
+CMD [ "java", "-jar", "./target/docker-example-1.1.3.jar" ]
